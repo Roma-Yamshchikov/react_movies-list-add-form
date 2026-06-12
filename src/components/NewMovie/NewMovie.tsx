@@ -19,8 +19,8 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   const isDisabled =
     !title.trim() || !imgUrl.trim() || !imdbUrl.trim() || !imdbId.trim();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
     onAdd({ title, description, imgUrl, imdbUrl, imdbId });
     setCount(count + 1);
     setTitle('');
