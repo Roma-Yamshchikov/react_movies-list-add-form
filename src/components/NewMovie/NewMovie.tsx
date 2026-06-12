@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField } from '../TextField';
 
 type Props = {
-  onAdd: (movie: object) => void;
+  onAdd: (prevMovies: object) => void;
 };
 
 export const NewMovie: React.FC<Props> = ({ onAdd }) => {
